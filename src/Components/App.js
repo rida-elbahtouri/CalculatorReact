@@ -5,7 +5,7 @@ import ButtonPanel from "./ButtonPanel";
 import "../App.css";
 const App = () => {
   return (
-    <div id="rootApp">
+    <div className="calculator" id="rootApp">
       <Display />
       <ButtonPanel />
     </div>

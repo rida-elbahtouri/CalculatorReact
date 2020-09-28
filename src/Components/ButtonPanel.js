@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const ButtonPanel = () => {
   return (
-    <div className="calucator-interface">
+    <div className="calucator-buttons">
       <div className="row">
         <Button name="AC" />
         <Button name="+/-" />
