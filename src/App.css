@@ -23,4 +23,5 @@ The Button groups should be displayed horizontally in rows. */
 .calucator-buttons button {
   height: 100px;
   width: 25%;
+  border: 1px solid gray;
 }
