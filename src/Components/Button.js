@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 const Button = (props) => {
+  
   const { name, color, wide } = props;
+
   return (
     <button
       type="button"
@@ -21,8 +23,10 @@ Button.propTypes = {
   wide: PropTypes.string,
 };
 
+
 Button.defaultProps = {
   color: "#F08D45",
   wide: "25%",
 };
+
 export default Button;
