@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-const Button = (props) => {
-  
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Button = props => {
   const { name, color, wide } = props;
 
   return (
@@ -18,15 +18,14 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   color: PropTypes.string,
   wide: PropTypes.string,
 };
 
-
 Button.defaultProps = {
-  color: "#F08D45",
-  wide: "25%",
+  color: '#F08D45',
+  wide: '25%',
 };
 
 export default Button;
