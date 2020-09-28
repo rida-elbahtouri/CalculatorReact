@@ -8,6 +8,10 @@ This project is a simple calculator build using React.
 
 [click here](https://calculatorrida.herokuapp.com/)
 
+### ScreenShot
+
+![screenshot](./assets/Capture.PNG)
+
 ## Built With
 
 - React
