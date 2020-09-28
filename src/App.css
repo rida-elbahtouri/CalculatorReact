@@ -1,20 +1,24 @@
 h1 {
   color: red;
 }
+
 * {
   box-sizing: border-box;
 }
+
 .calculator {
   width: 700px;
   display: flex;
   flex-direction: column;
 }
+
 .result {
   height: 100px;
   background-color: gray;
   width: 100%;
+  font-size: 36px;
   color: white;
-  padding: 10px;
+  padding: 25px 20px;
   text-align: right;
 }
 
