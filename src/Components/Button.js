@@ -13,4 +13,4 @@ Button.propTypes = {
   name: PropTypes.string,
 };
 
-export default Display;
+export default Button;
