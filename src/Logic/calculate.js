@@ -1,16 +1,17 @@
-import operate from "./operate";
+import operate from './operate';
+
 const calculate = (dataObj, buttonName) => {
   let { total, next, operation } = dataObj;
 
-  const operations = ["+", "-", "x", "÷", "%"];
+  const operations = ['+', '-', 'x', '÷', '%'];
 
-  if (buttonName === "+/-") {
+  if (buttonName === '+/-') {
     total *= -1;
     next *= -1;
-  } else if (buttonName === "AC") {
+  } else if (buttonName === 'AC') {
     total = null;
     next = null;
-  } else if (buttonName === "=") {
+  } else if (buttonName === '=') {
     operate(total, next, operation);
   } else if (!operations.includes(buttonName)) {
     if (total === null) {
