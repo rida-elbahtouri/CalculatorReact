@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = (props) => {
-  const { name, color, wide, clickHandler } = props;
-
+const Button = props => {
+  const {
+    name, color, wide, clickhandeler,
+  } = props;
   return (
     <button
       type="button"
@@ -11,7 +12,7 @@ const Button = (props) => {
       name={name}
       id={name}
       className="button"
-      onClick={() => clickHandler(name)}
+      onClick={() => clickhandeler(name)}
     >
       {name}
     </button>
@@ -20,7 +21,7 @@ const Button = (props) => {
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  clickHandler: PropTypes.isRequired,
+  clickhandler: PropTypes.func.isRequired,
   color: PropTypes.string,
   wide: PropTypes.string,
 };

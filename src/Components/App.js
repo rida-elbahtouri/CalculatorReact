@@ -16,15 +16,14 @@ class App extends Component {
     };
   }
 
-  handleClick(btnname) {
-    const obj = this.state;
-    this.setState(calculate(obj, btnname));
-  }
+  handleClick = btnname => {
+    const obj = calculate(this.state, btnname);
+    this.setState(obj);
+  };
 
   render() {
     const { total, next } = this.state;
-    const result =
-      (next ? next.toString() : '0') || (total ? total.toString() : '0');
+    const result = total ? (next ? next.toString() : total.toString()) : '0';
     return (
       <div className="calculator" id="rootApp">
         <Display result={result} />

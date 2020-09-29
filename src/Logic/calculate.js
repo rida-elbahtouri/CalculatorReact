@@ -11,18 +11,25 @@ const calculate = (dataObj, buttonName) => {
   } else if (buttonName === 'AC') {
     total = null;
     next = null;
+    operation = null;
   } else if (buttonName === '=') {
-    operate(total, next, operation);
+    if (total && next && operation) {
+      total = operate(total, next, operation);
+      next = null;
+    }
   } else if (!operations.includes(buttonName)) {
-    if (total === null) {
+    if (total === null && operation === null && next === null) {
+      total = buttonName;
+    } else if (next === null && operation === null) {
       total += buttonName;
+    } else if (next === null) {
+      next = buttonName;
     } else {
       next += buttonName;
     }
   } else if (operations.includes(buttonName)) {
     operation = buttonName;
   }
-
   return { total, next, operation };
 };
 export default calculate;
