@@ -20,8 +20,8 @@ const Button = props => {
 };
 
 Button.propTypes = {
+  clickhandeler: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
-  clickhandler: PropTypes.func.isRequired,
   color: PropTypes.string,
   wide: PropTypes.string,
 };

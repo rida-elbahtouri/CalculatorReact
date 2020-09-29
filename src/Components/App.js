@@ -23,6 +23,7 @@ class App extends Component {
 
   render() {
     const { total, next } = this.state;
+    // eslint-disable-next-line
     const result = total ? (next ? next.toString() : total.toString()) : '0';
     return (
       <div className="calculator" id="rootApp">
