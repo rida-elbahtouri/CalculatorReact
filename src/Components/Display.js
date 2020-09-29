@@ -1,6 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-const Display = (props) => {
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Display = props => {
   const { result } = props;
   return <div className="result">{result}</div>;
 };
@@ -10,6 +11,6 @@ Display.propTypes = {
 };
 
 Display.defaultProps = {
-  result: "0",
+  result: '0',
 };
 export default Display;
