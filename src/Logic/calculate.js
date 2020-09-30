@@ -17,6 +17,18 @@ const calculate = (dataObj, buttonName) => {
       total = operate(total, next, operation);
       next = null;
     }
+
+
+  } else if (buttonName === '.') {
+    if (total === null && operation === null && next === null) {
+      total = '0.';
+    } else if (next === null && operation === null) {
+      total += buttonName;
+    } else if (next === null) {
+      next = '0.';
+    } else {
+      next += buttonName;
+    }
   } else if (!operations.includes(buttonName)) {
     if (total === null && operation === null && next === null) {
       total = buttonName;
