@@ -1,38 +1,49 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = () => (
-  <div className="calucator-buttons">
-    <div className="row">
-      <Button color="#DCDCDC" name="AC" />
-      <Button color="#DCDCDC" name="+/-" />
-      <Button color="#DCDCDC" name="%" />
-      <Button name="÷" />
+const ButtonPanel = props => {
+  const { clickhandeler } = props;
+  return (
+    <div className="calucator-buttons">
+      <div className="row">
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="AC" />
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="+/-" />
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="%" />
+        <Button clickhandeler={clickhandeler} name="÷" />
+      </div>
+      <div className="row">
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="7" />
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="8" />
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="9" />
+        <Button clickhandeler={clickhandeler} name="x" />
+      </div>
+      <div className="row">
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="4" />
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="5" />
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="6" />
+        <Button clickhandeler={clickhandeler} name="-" />
+      </div>
+      <div className="row">
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="1" />
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="2" />
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="3" />
+        <Button clickhandeler={clickhandeler} name="+" />
+      </div>
+      <div className="row">
+        <Button
+          clickhandeler={clickhandeler}
+          color="#DCDCDC"
+          wide="50%"
+          name="0"
+        />
+        <Button clickhandeler={clickhandeler} color="#DCDCDC" name="." />
+        <Button clickhandeler={clickhandeler} name="=" />
+      </div>
     </div>
-    <div className="row">
-      <Button color="#DCDCDC" name="7" />
-      <Button color="#DCDCDC" name="8" />
-      <Button color="#DCDCDC" name="9" />
-      <Button name="x" />
-    </div>
-    <div className="row">
-      <Button color="#DCDCDC" name="4" />
-      <Button color="#DCDCDC" name="5" />
-      <Button color="#DCDCDC" name="6" />
-      <Button name="-" />
-    </div>
-    <div className="row">
-      <Button color="#DCDCDC" name="1" />
-      <Button color="#DCDCDC" name="2" />
-      <Button color="#DCDCDC" name="3" />
-      <Button name="+" />
-    </div>
-    <div className="row">
-      <Button color="#DCDCDC" wide="50%" name="0" />
-      <Button color="#DCDCDC" name="." />
-      <Button name="=" />
-    </div>
-  </div>
-);
-
+  );
+};
+ButtonPanel.propTypes = {
+  clickhandeler: PropTypes.func.isRequired,
+};
 export default ButtonPanel;

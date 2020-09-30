@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { name, color, wide } = props;
-
+  const {
+    name, color, wide, clickhandeler,
+  } = props;
   return (
     <button
       type="button"
@@ -11,6 +12,7 @@ const Button = props => {
       name={name}
       id={name}
       className="button"
+      onClick={() => clickhandeler(name)}
     >
       {name}
     </button>
@@ -18,6 +20,7 @@ const Button = props => {
 };
 
 Button.propTypes = {
+  clickhandeler: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   color: PropTypes.string,
   wide: PropTypes.string,

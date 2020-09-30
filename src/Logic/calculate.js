@@ -17,6 +17,8 @@ const calculate = (dataObj, buttonName) => {
       total = operate(total, next, operation);
       next = null;
     }
+
+
   } else if (buttonName === '.') {
     if (total === null && operation === null && next === null) {
       total = '0.';
